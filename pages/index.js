@@ -21,12 +21,15 @@ export default function Home() {
       method: "POST",
       body: JSON.stringify({ zw, english, comment, tags }),
     });
+
     // Success if status code is 201
     if (res.status === 201) {
       toast("Thank you for contacting us!", { type: "success" });
       setZw("");
       setEnglish("");
       setComment("");
+      console.log(res);
+      console.log(JSON.stringify({ zw, english, comment, tags }));
     } else {
       toast("Please re-check your inputs.", { type: "error" });
     }

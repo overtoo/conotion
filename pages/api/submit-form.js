@@ -38,9 +38,7 @@ export default async function handler(req, res) {
         Tags: {
           multi_select: [
             {
-              text: {
-                content: tags,
-              },
+              name: tags,
             },
           ],
         },
