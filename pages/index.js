@@ -15,7 +15,7 @@ export default function Home() {
   const [comment, setComment] = useState("");
 
   // Form submit handler
-  const url = "http://conotion.vercel.app/api/submit-form";
+  const url = "https://conotion.vercel.app/api/submit-form";
   // const url = "http://localhost:3000/api/submit-form";
   const submitForm = async (e) => {
     e.preventDefault();
