@@ -15,9 +15,11 @@ export default function Home() {
   const [comment, setComment] = useState("");
 
   // Form submit handler
+  const url = "http://conotion.vercel.app/api/submit-form";
+  // const url = "http://localhost:3000/api/submit-form";
   const submitForm = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:3000/api/submit-form", {
+    const res = await fetch(url, {
       method: "POST",
       body: JSON.stringify({ zw, english, comment, tags }),
     });
@@ -39,7 +41,7 @@ export default function Home() {
     <div className={styles.container}>
       <ToastContainer />
       <form className={styles.form} onSubmit={submitForm}>
-        <h1 className={styles.title}>Add some 中文</h1>
+        <h1 className={styles.title}>Add new</h1>
         <div>
           <label htmlFor="zw">中文</label>
           <input
